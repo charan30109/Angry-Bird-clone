@@ -23,7 +23,7 @@ var bg = "sprites/bg1.png";
 var gameState = "onSling";
 
 //score
-var score = 0;
+// var score = 0;
 
 //birds
 var birds=[];
@@ -78,11 +78,11 @@ function draw(){
     if(backgroundImg){
         background(backgroundImg);
         
-        noStroke();
-        textFont("Impact")
-        textSize(20)
-        fill("Red")
-        text("Score : " + score, width-300, 20); 
+        // noStroke();
+        // textFont("Impact")
+        // textSize(20)
+        // fill("Red")
+        // text("Score : " + score, width-300, 20); 
         
         if(birds.length>0){
             text("Press Space Key for Next Bird", width/2-200, 25); 
@@ -97,11 +97,11 @@ function draw(){
     else{
         //background("lightblue");
         background(bgImg);
-        noStroke();
-        textFont("Impact")
-        textSize(20)
-        fill("Red")
-        text("Score : " + score, width-300, 20); 
+        // noStroke();
+        // textFont("Impact")
+        // textSize(20)
+        // fill("Red")
+        // text("Score : " + score, width-300, 20); 
         
         if(birds.length>0){
             text("Press Space Key for Next Bird", width/2-200, 25); 
