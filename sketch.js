@@ -33,9 +33,6 @@ function preload() {
     getBackgroundImg();
     bgImg=loadImage(bg);
 
-    birdFlySound=loadSound("sounds/bird_flying.mp3")
-    pigSnortSound=loadSound("sounds/pig_snort.mp3")
-    birdSelectSound=loadSound("sounds/bird_select.mp3")
     
 }
 
@@ -151,14 +148,12 @@ function mouseDragged(){
     if (gameState!=="launched"){
         Matter.Body.setPosition(birds[birds.length-1].body, {x: mouseX , y: mouseY});
         Matter.Body.applyForce(birds[birds.length-1].body, birds[birds.length-1].body.position, {x:5,y:-5})
-        birdSelectSound.play()
         return false;
     }
 }
 //fly the bird when mouse is released
 function mouseReleased(){
     slingshot.fly();
-    birdFlySound.play()
     birds.pop();
     gameState = "launched";
     return false;
